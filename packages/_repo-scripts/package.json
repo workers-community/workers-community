@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint --cache .",
     "typecheck": "tsc",
-    "build": "pnpm run /^build:.*$/",
+    "build": "pnpm run \"/^build:.*/\"",
     "build:workers-types": "tsx scripts/workers-types"
   },
   "devDependencies": {
