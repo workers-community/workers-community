@@ -1,0 +1,7 @@
+{
+  "name": "@workers-community/repo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for all @workers-community projects",
+  "packageManager": "pnpm@9.12.3"
+}
