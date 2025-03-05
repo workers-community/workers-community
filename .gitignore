@@ -1,7 +1,11 @@
 node_modules/
-temp/
-temp*/
-tsconfigDir/
-apiExtractorDir/
-
 .DS_Store
+
+.eslintcache
+tsconfig.tsbuildinfo
+
+.vscode/
+.idea/
+
+packages/workers-types/*
+!packages/workers-types/README.md

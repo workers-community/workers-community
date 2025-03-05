@@ -1,0 +1,35 @@
+name: Release community packages
+
+on: # yamllint disable-line rule:truthy
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '40 22 * * *'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Release community packages
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.x'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+
+      - name: Build packages
+        run: |
+          pnpm run --filter @workers-community/_repo-scripts build
+
+      - name: Publish all packages
+        run: |
+          pnpm -r publish --access public

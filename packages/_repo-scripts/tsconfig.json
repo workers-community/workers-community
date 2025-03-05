@@ -1,0 +1,4 @@
+{
+  "extends": "some-tsconfig-preset/node",
+  "include": [ "**/*.ts" ]
+}
