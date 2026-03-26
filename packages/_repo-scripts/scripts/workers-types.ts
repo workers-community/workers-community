@@ -7,7 +7,7 @@ import { temporaryFile } from 'tempy'
 
 // find the latest version of @cloudflare/workers-types from npm
 const versionResponse = await fetch('https://registry.npmjs.org/@cloudflare/workers-types')
-const version = await (versionResponse.json() as Promise<{'dist-tags': {latest: string}}>).then(data => data['dist-tags'].latest)
+const version = await (versionResponse.json() as Promise<{ 'dist-tags': { latest: string } }>).then(data => data['dist-tags'].latest)
 console.log(version)
 
 // fail for other major version so we can manually investigate

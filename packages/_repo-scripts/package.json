@@ -6,20 +6,19 @@
   "author": "DaniFoldi",
   "type": "module",
   "scripts": {
-    "lint": "eslint --cache .",
-    "typecheck": "tsc",
     "build": "pnpm run \"/^build:.*/\"",
-    "build:workers-types": "tsx scripts/workers-types"
+    "build:workers-types": "tsx scripts/workers-types",
+    "lint": "eslint --cache .",
+    "typecheck": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^22.13.9",
-    "bundled-eslint-config": "^0.5.17",
-    "eslint": "^9.21.0",
-    "jiti": "^2.4.2",
-    "some-tsconfig-preset": "^1.6.0",
-    "tar": "^7.4.3",
-    "tempy": "^3.1.0",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.2"
+    "@types/node": "25.5.0",
+    "bundled-eslint-config": "0.7.11",
+    "eslint": "9.39.2",
+    "some-tsconfig-preset": "3.0.1",
+    "tar": "7.5.13",
+    "tempy": "3.2.0",
+    "tsx": "4.21.0",
+    "typescript": "6.0.2"
   }
 }
