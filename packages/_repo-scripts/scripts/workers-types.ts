@@ -30,7 +30,7 @@ const packageJson = JSON.parse(packageJsonFile)
 packageJson.name = '@workers-community/workers-types'
 packageJson.repository = {
   type: 'git',
-  url: 'https://github.com/workers-community/workers-types'
+  url: 'https://github.com/workers-community/workers-community'
 }
 packageJson.author = 'Workers Community'
 
