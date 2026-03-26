@@ -11,6 +11,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
     name: Release community packages
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
 
@@ -40,5 +43,3 @@ jobs:
       - name: Publish all packages
         run: |
           pnpm -r publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
